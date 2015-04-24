@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+   
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/myCss.css">
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("#x2 q span").mouseenter(function(){
+            $(this).children().toggleClass("disv"); 
+        });
+         $("#x2 q span").mouseleave(function(){
+            $(this).children().toggleClass("disv"); 
+        });
+
+
+    });
+    </script>
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+
+<div id="impress">
+    <!--PPT1-->
+    <div class="step slide" data-x="-1000" data-y="-1500" id="x1">
+        <q>题目</q>
+        <strong>HTML5?</strong>
+        <div>奚圆<span>圆</span></div>
+    </div>
+    <!--PPT2-->
+    <div class="step slide" data-x="0" data-y="-1500" id="x2">        
+        <q>HTML5 ~= <span><b class="xhtml">HTML</b><b class="xhtml disv"> 结 构 </b> </span>+ <span><b class="xcss">CSS3</b><b class="xcss disv"> 样 式 </b></span>+<span> <b class="xjs">&nbsp;&nbsp;&nbsp;JS&nbsp;&nbsp;&nbsp;</b><b class="xjs disv"> 行 为  </b><span></q> 
+        <br><br><br>   
+        <h1>HTML5可以干什么?</h1>
+        <ul>
+            <li>满足移动用户的需要</li>
+            <li>WebAPP</li>
+            <li>更炫、更现代的web服务</li>
+            <li>游戏开发</li>
+        </ul>    
+    </div>
+    <!--PPT3-->
+    <div class="step slide" data-x="1000" data-y="-1500" id="x3">
+        <q>html5的<b class="owText">八大</b>新特性</q>
+        <ul>
+            <li>
+                <a>语义 &amp; 新标签</a>
+                <img src="images/Semantics.png">
+            </li>
+            <li><a>图像 / 多媒体</a>
+                <img src="images/3D_Effects.png">
+            </li> 
+            <li>
+                <a>离线 / 本地存储</a>
+                <img src="images/Storage.png">
+            </li>
+            <li>
+                <a>实时 / 交互</a>
+                <img src="images/Connectivity.png">
+            </li>
+            <li>
+                <a>设备通用</a>
+                <img src="images/Device_Access.png">
+            </li>       
+                      
+            <li>
+                <a>性能 &amp; 集成</a>
+                <img src="images/Performance.png">
+            </li>
+             <li>
+                <a>CSS3</a>
+                <img src="images/Styling.png">
+            </li>
+        </ul>
+    </div>
+
+
+
+    <!--PPT4-->
+    <div class="step slide" data-x="2000" data-y="-1500" id="x4">
+       <h1>语义</h1>
+       <hr>
+       <p>HTML5每个标签都有自己的意义不能使用标签去构造样式</p>
+       <p class="ximg">
+        <img src="images/html5-layout.jpg">
+       </p>
+       <h5>能用css代替的元素:</h5>
+       <p>basefont、big、center、font、s、strike、tt、u。</p>
+        <h5>不再使用frame框架:</h5>
+        <p>frameset、frame、noframes。只支持iframe框架</p>
+    </div>
+    <!--PPT5-->
+    <div class="step slide" data-x="2000" data-y="-1500" data-rotate-y="90" id="x5">
+         <h1>新标签</h1><hr>
+        <div class="xbox">
+            <pre><code>&lt;meter min="0" max="20"&gt;</code>5<code>&lt;/meter&gt;</code></pre>
+            <meter min="0" max="100" low="40" high="90" optimum="100" value="91">A+</meter>
+        </div>
+        <div class="xbox">
+           <pre><code>&lt;progress&gt;</code>&lt;span id="objprogress"&gt;85&lt;/span&gt;%<code>&lt;/progress&gt;</code></pre>
+            <progress value="75" max="100"><span id="objprogress">85</span>%</progress>
+        </div>
+       
+        <h1>新form表单类型</h1>
+        <span> &nbsp;&nbsp;&nbsp; email、url、number、range、Date pickers、search、color</span>
+        <hr>
+        <div class="xbox">
+        <pre>E-mail:&lt;input <code>type="email"</code>name="user_email" /&gt;</pre>
+        <form action="">
+        <input type="email" name="user_email" />
+        <input type="submit" value="c"/>
+        </form>
+       
+        <pre>Date: &lt;input type="date" name="user_date" /&gt;</pre>
+        <input type="date" name="user_date" /></div>
+        <div class="xbox">
+        number:<input type="number" name="points" min="1" max="10" />
+        range：<input type="range" min="0" max="50" value="10" />
+        color:<input type="color" placeholder="e.g. #bbbbbb" /><br>
+        search:<input type="search" results="10" placeholder="Search..." />
+    </div>
+</div> 
+    <!--PPT6-->
+ <div class="step slide" data-x="2000" data-y="-1500" data-rotate-x="90" id="x6">
+    <h1>多媒体 &amp;图形</h1>
+       <hr>
+    <div class = "xbox">
+        <pre class="prettyprint"><span class="tag">&lt;</span><b><span class="tag">audio</span></b><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"audio"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"sound.mp3"</span><span class="pln"> </span><b><span class="atn">controls</span></b><span class="tag">&gt;&lt;/audio&gt;</span></pre>
+        <br>
+        <pre class="prettyprint"><span class="tag">&lt;</span><b><span class="tag">video</span></b><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"video"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"movie.webm"</span><span class="pln"> </span><b><span class="atn">autoplay</span></b><span class="pln"> </span><b><span class="atn">controls</span></b><span class="tag">&gt;<br>&lt;/video&gt;</span></pre>
+    </div>
+    <br>
+    <video width="390" controls>
+                <source src="media/mov_bbb.ogg">
+                <source src="src/mov_bbb.mp4">
+                <source src="src/mov_bbb.ogv" type="video/ogg;">
+                Your browser does not support the video tag
+     </video>
+     <audio src="media/live.mp3" controls></audio>
+</div> 
+  
+
+<div class="step slide" data-x="2000" data-y="-1500" data-z="-1000" data-rotate-x="90" id="x7">
+    <a href="http://akirodic.com/p/jellyfish/" target="_blank">漂亮水母</a>
+    <div class="xbox">
+       <pre>
+        &lt;canvas id="canvas" width="838" height="220" &gt;
+        &lt;/canvas&gt;
+        &lt;script&gt;
+             var canvasContext = document.getElementById("canvas").getContext("2d");
+             var grd=canvasContext.createRadialGradient(95,50,0,95,50,40);
+             grd.addColorStop(0,"red");                 grd.addColorStop(1,"orange");
+             canvasContext.fillStyle=grd;                 canvasContext.beginPath();
+             canvasContext.arc(95,50,40,0,2*Math.PI);     canvasContext.fill();
+             canvasContext.closePath();                   canvasContext.font="30px Arial";
+             canvasContext.fillText("这是个圆",35,120);
+             canvasContext.stroke();
+        &lt;/script&gt;
+      </pre>
+      <canvas id="canvas" width="650" height="150"></canvas>
+
+<script>
+  var canvasContext = document.getElementById("canvas").getContext("2d");
+  var grd=canvasContext.createRadialGradient(95,50,0,95,50,40);
+  grd.addColorStop(0,"red");
+  grd.addColorStop(1,"orange");
+  canvasContext.fillStyle=grd;
+  canvasContext.beginPath();
+  canvasContext.arc(95,50,40,0,2*Math.PI);
+  canvasContext.fill();
+  canvasContext.closePath();
+  canvasContext.font="30px Arial";
+  canvasContext.fillText("这是个圆",35,120);
+  canvasContext.stroke();
+</script>
+    </div>
+</div>
+<div class="step slide" data-x="2000" data-y="-3000" data-z="-1000" data-rotate-x="190" id="x8">
+     <h1>其他API的简单介绍</h1><hr>
+     <h3>离线 &amp;本地存储</h3>
+     <p>
+         <ul>
+            <li>localStorage、sessionStorage </li>
+            <li>Application Cache</li>
+        </ul>
+     </p>
+     <h3>实时 &amp; 交互</h3>
+     <p>
+        <ul>
+            <li>AJAX</li>
+            <li>Server-Sent Event和WebSockets</li>
+        </ul>
+     </p>
+</div>
+<div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+</div>
+<div id="x9" class="step milky" data-x="0" data-y="0" data-scale="4">
+        <h1 class="milky">CSS3</h1>
+        <p>       
+            <a>选择器</a>
+            <a>边框</a>
+            <a>新的盒模型</a>
+            <a>过渡</a><a>变换</a><a>动画</a>
+        </ul>
+    </p>
+</div>
+
+<div id="x10" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+    <q>CSS的核心---<b>选择器</b></q>
+    <p>Id选择器、类选择器、标签选择器、属性选择器、<br>后代选择器、相邻选择器、子选择器、伪类选择器</p><hr>
+    <div>
+        :nth-child(n) :nth-of-type(n)
+        <div class="xbox"> p:nth-of-type(2)<br> {<br> background:#ff0000;<br> } </div>
+    </div>
+</div>
+<div id="x11" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+   <h1>边框</h1> 
+   <div>圆角</div>
+   <div>盒阴影</div>
+   <div>图片边框</div>
+   <p>border-radius:80px;box-shadow: 10px 10px 5px #888888;<br>
+    border-image:url(../images/border.png) 30 30 round;
+   </p>
+</div>
+<div id="x12" class="step" data-x="3500" data-y="3100" data-rotate-x="90" data-scale="6">
+   <h1>动画</h1>
+<div class="xbox">
+<pre>@-webkit-keyframes pulse {
+ from {
+   opacity: 0.0;
+   font-size: 100%;
+ }
+ to {
+   opacity: 1.0;
+   font-size: 200%;
+ }
+}
+
+div{
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+}
+</pre>
+</div>
+<div class="animation-example">
+    Animations
+</div>
+</div>
+<div id="x13" class="step" data-x="2825" data-y="2325" data-z="-3000" data-scale="1">
+        <b>JavaScript</b>
+</div>
+
+<div id="x14" class="step" data-x="3825" data-y="2325" data-z="-3000" data-scale="1">
+   JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型(对象)的语言，内置支持类型。
+</div>
+<div id="x15" class="step" data-x="3825" data-y="3325" data-z="-3000" data-scale="1">
+   <div>
+        <ul>
+            <li><a>JSON</a></li>
+        </ul>
+   </div>
+   <div>
+    <pre>
+       {"programmers":[
+         {"firstName":"Brett","lastName":"McLaughlin","email":"aaaa"},
+         {"firstName":"Jason","lastName":"Hunter","email":"bbbb"},
+         {"firstName":"Elliotte","lastName":"Harold","email":"cccc"}
+         ],
+        "authors":[
+         {"firstName":"Isaac","lastName":"Asimov","genre":"sciencefiction"},
+         {"firstName":"Tad","lastName":"Williams","genre":"fantasy"},
+         {"firstName":"Frank","lastName":"Peretti","genre":"christianfiction"}
+         ],
+        "musicians":[
+         {"firstName":"Eric","lastName":"Clapton","instrument":"guitar"},
+         {"firstName":"Sergei","lastName":"Rachmaninoff","instrument":"piano"}
+         ]
+     }
+    </pre>
+   </div>
+</div>
+<div id="x16" class="step" data-x="3825" data-y="4325" data-scale="1">
+   <div>
+        <ul>
+            <li><a>AJAX</a></li>
+        </ul>
+   </div>
+   <div class="xbox">
+    1、获得XMLHttpRequest对象。
+    <pre>
+      if(window.XMLHttpRequest) {  
+             req = new XMLHttpRequest();  
+      }else if(window.ActiveXObject) {  
+            req = new ActiveXObject("Microsoft.XMLHTTP");  
+      }  
+    </pre>
+    2、创建连接
+    <pre>
+     XMLHttpReq.open("get", url, true);
+    </pre>
+    3、指定响应函数 
+    <pre> XMLHttpReq.onreadystatechange = processResponse; 
+            function processResponse() {  
+                if (XMLHttpReq.readyState == 4) {  
+                    if (XMLHttpReq.status == 200) {  
+                        var text = XMLHttpReq.responseText;  
+                        ...
+                    }
+                }
+    </pre>
+     4、发送参数
+     xmlhttp.send(null);
+   </div>
+</div>
+
+
+
+<div id="x17" class="step" data-x="5825" data-y="5325" data-z="-2000" data-scale="1">
+   <div>
+        <ul>
+            <li><a>JSONP</a></li>
+        </ul>
+   </div>
+   <div>
+    <q>基于安全的原因，浏览器是存在同源策略这个机制的</q>
+   </div>
+</div>
+
+<div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+</div>
+
+</div>
+
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+
+</body>
+</html>
+
